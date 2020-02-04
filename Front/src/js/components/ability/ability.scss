@@ -1,0 +1,23 @@
+
+.paper{
+    position: relative;
+    
+
+    .dimension{
+        position: absolute;
+
+        width: 100%;
+        padding-bottom: 100%;
+        
+        transform: translate(50%,50%);
+
+        .tag{
+            position: absolute;   
+
+            border: 1px solid red;
+
+            transform: translate(-50%,-50%);
+        }
+
+    }
+}

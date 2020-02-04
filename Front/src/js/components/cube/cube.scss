@@ -1,0 +1,52 @@
+@mixin default_font($color, $font-weight){
+    font-weight: $font-weight;
+    color: $color;
+}
+
+@mixin font_Campton($font_size:18px, $color:black, $font_weight:lighter){
+
+    font-family: 'campton', sans-serif;
+    font-size: $font_size;
+    @include default_font($color, $font_weight);
+
+    @content;
+}
+
+@mixin font_notosan($font_size:18px, $color:black, $font_weight:lighter){
+
+    font-family: 'noto_san', sans-serif;
+    font-size: $font_size;
+    @include default_font($color, $font_weight);
+
+    @content;
+}
+
+
+.cube{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    position: relative;
+
+    margin: 3px;
+
+    @include font_notosan(14px,#666);
+    
+    border: 1px solid #bfbfbf;
+
+    cursor: pointer;
+
+    &.active{
+        color: #0036fa;
+        border-color: #0036fa;
+    }
+
+    span{
+        position: absolute;
+        top:50%;
+        left:50%;
+
+        transform: translate(-50%,-50%);
+    }
+}
